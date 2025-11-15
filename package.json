@@ -1,0 +1,25 @@
+{
+  "name": "udemy-clone",
+  "version": "1.0.0",
+  "description": "A React-based clone of Udemy landing page",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serve -s . -l 3000",
+    "start": "serve -s . -l 3000"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "keywords": [
+    "react",
+    "udemy",
+    "clone",
+    "landing-page"
+  ],
+  "author": "",
+  "license": "ISC"
+}
