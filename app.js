@@ -4,6 +4,8 @@ const App = () => {
       <Header />
       <main>
         <Hero />
+        <CareerSkills />
+        <AIEra />
         <Skills />
         <Courses />
         <TrustedCompanies />
