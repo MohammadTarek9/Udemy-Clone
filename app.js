@@ -7,7 +7,6 @@ const App = () => {
         <CareerSkills />
         <AIEra />
         <Skills />
-        <Courses />
         <TrustedCompanies />
       </main>
     </div>
