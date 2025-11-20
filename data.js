@@ -267,69 +267,6 @@ const testimonialsData = {
     }
   ]
 };
-
-/*
-===============================================================================
-                            IMAGE IMPLEMENTATION GUIDE
-===============================================================================
-
-To show actual pictures in your Udemy clone, you have several options:
-
-1. 📡 ONLINE IMAGES (Current Implementation)
-   ✅ Already implemented above with real Udemy course thumbnails
-   ✅ No setup required - images load directly from CDN
-   ✅ Always up-to-date and high quality
-   ❌ Requires internet connection
-   ❌ May break if URLs change
-
-2. 📁 LOCAL IMAGES
-   Create an 'assets/images' folder and add your images:
-   
-   Example structure:
-   assets/
-   └── images/
-       ├── courses/
-       │   ├── javascript-course.jpg
-       │   ├── python-course.jpg
-       │   └── react-course.jpg
-       ├── companies/
-       │   ├── volkswagen.png
-       │   └── samsung.png
-       └── hero/
-           └── hero-banner.jpg
-
-   Then update image paths like:
-   image: "assets/images/courses/javascript-course.jpg"
-
-3. 🎨 PLACEHOLDER SERVICES
-   Use services that generate placeholder images:
-   
-   - Picsum: https://picsum.photos/300/200
-   - Lorem Pixel: https://loremflickr.com/300/200/coding
-   - Unsplash Source: https://source.unsplash.com/300x200/?programming
-   
-   Example:
-   image: "https://picsum.photos/300/200?random=" + course.id
-
-4. 🖼️ FREE STOCK IMAGES
-   Download from free sources and save locally:
-   
-   - Unsplash.com
-   - Pexels.com  
-   - Pixabay.com
-   - Freepik.com (with attribution)
-
-5. 📷 CUSTOM SCREENSHOTS
-   Create your own course mockups:
-   
-   - Use Canva.com for course thumbnails
-   - Take screenshots of actual coding environments
-   - Create branded course covers
-
-6. 🔄 DYNAMIC PLACEHOLDER REPLACEMENT
-   You can also create a function to fallback to placeholders:
-*/
-
 // Utility function for image fallback
 const getImageUrl = (primaryUrl, fallbackUrl = null, useRandomPlaceholder = true) => {
   if (primaryUrl && primaryUrl !== "/api/placeholder/300/200") {
@@ -347,29 +284,3 @@ const getImageUrl = (primaryUrl, fallbackUrl = null, useRandomPlaceholder = true
   
   return "assets/images/default-course.jpg";
 };
-
-// Example usage in components:
-// <img src={getImageUrl(course.image)} alt={course.title} />
-
-/*
-===============================================================================
-                              QUICK SETUP GUIDE
-===============================================================================
-
-OPTION A: Keep Current Setup (Recommended for Development)
-1. ✅ Already done! Real Udemy images are loaded
-2. Just run your project - images will appear automatically
-
-OPTION B: Use Local Images
-1. Create folder: assets/images/
-2. Download images and save them there
-3. Update image paths in data.js
-4. Ensure your local server can serve static files
-
-OPTION C: Mix of Both
-1. Use online images for courses (current setup)
-2. Use local images for your custom content
-3. Implement the getImageUrl() utility function
-
-===============================================================================
-*/
